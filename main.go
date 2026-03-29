@@ -134,7 +134,7 @@ func main() {
 		case <-ticker.C:
 			if update(state) {
 				fmt.Print("\033[H\033[2J")
-				fmt.Printf("Game Over!\r\nScore: %d\r\n\r\n'q' para sair, qualquer outra para jogar de novo...\r\n", state.Score)
+				fmt.Printf("Game Over!\r\nScore: %d\r\n\r\nPress 'q' to quit or any other key to play again...\r\n", state.Score)
 				key := <-input
 				if key == 'q' {
 					return
